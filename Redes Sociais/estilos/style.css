@@ -50,7 +50,15 @@ section#redessociais img{
     border-radius: 50%;
     box-shadow: 1px 2px 8px black;
     /* display: block; */
+    box-sizing: border-box;
 }
 section#redessociais{
-    text-align: left;
+    text-align: right;
+}
+
+section#redessociais img:hover{
+    border: 2px solid rgba(255, 255, 255, 0.69);
+    transform: translate(-3px,-3px);
+    box-shadow: 5px 5px 10px black;
+    transition: 0.2s, border 0.4s;
 }
