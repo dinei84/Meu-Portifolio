@@ -8,15 +8,30 @@
 </head>
 <body>
     <h1>Formulário de Frete</h1>
-    <form id="freteForm" autocomplete="off">
-        <label for="frete">Frete:</label>
-        <input type="text" id="frete" name="frete" required><br>
+    <form id="freteForm" action="display.html" method="post">
+        <label for="uf">UF:</label>
+        <input type="text" id="uf" name="uf" required><br>
 
-        <label for="carga">Carga:</label>
-        <input type="text" id="carga" name="carga" required><br>
+        <label for="destino">Destino:</label>
+        <input type="text" id="destino" name="destino" required><br>
 
-        <label for="descarga">Descarga:</label>
-        <input type="text" id="descarga" name="descarga" required><br>
+        <label for="embalagem">Embalagem:</label>
+        <input type="text" id="embalagem" name="embalagem" required><br>
+
+        <label for="coleta">Coleta:</label>
+        <input type="text" id="coleta" name="coleta" required><br>
+
+        <label for="entrega">Entrega:</label>
+        <input type="text" id="entrega" name="entrega" required><br>
+
+        <label for="cliente">Cliente:</label>
+        <input type="text" id="cliente" name="cliente" required><br>
+
+        <label for="produto">Produto:</label>
+        <input type="text" id="produto" name="produto" required><br>
+
+        <label for="infoAdicionais">Informações Adicionais:</label>
+        <input type="text" id="infoAdicionais" name="infoAdicionais"><br>
 
         <button type="submit">Enviar</button>
     </form>

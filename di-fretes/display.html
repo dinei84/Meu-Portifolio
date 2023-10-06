@@ -11,9 +11,15 @@
     <table>
         <thead>
             <tr>
-                <th>Frete</th>
-                <th>Carga</th>
-                <th>Descarga</th>
+                <th>UF</th>
+                <th>Destino</th>
+                <th>Embalagem</th>
+                <th>Coleta</th>
+                <th>Entrega</th>
+                <th>Cliente</th>
+                <th>Produto</th>
+                <th>Info Adicionais</th>
+                <th>Ação</th>
             </tr>
         </thead>
         <tbody id="freteTableBody">
@@ -28,17 +34,54 @@
         // Referência ao corpo da tabela
         const tableBody = document.getElementById('freteTableBody');
 
-        // Itere sobre todas as informações de frete e adicione linhas à tabela
-        fretes.forEach(freteData => {
+        // Função para adicionar uma linha à tabela
+        function adicionarLinha(freteData, index) {
             const newRow = tableBody.insertRow(tableBody.rows.length);
-            const cell1 = newRow.insertCell(0);
-            const cell2 = newRow.insertCell(1);
-            const cell3 = newRow.insertCell(2);
+            const ufCell = newRow.insertCell(0);
+            const destinoCell = newRow.insertCell(1);
+            const embalagemCell = newRow.insertCell(2);
+            const coletaCell = newRow.insertCell(3);
+            const entregaCell = newRow.insertCell(4);
+            const clienteCell = newRow.insertCell(5);
+            const produtoCell = newRow.insertCell(6);
+            const infoAdicionaisCell = newRow.insertCell(7);
+            const acaoCell = newRow.insertCell(8);
 
-            cell1.innerHTML = freteData.frete;
-            cell2.innerHTML = freteData.carga;
-            cell3.innerHTML = freteData.descarga;
-        });
+            ufCell.innerHTML = freteData.uf;
+            destinoCell.innerHTML = freteData.destino;
+            embalagemCell.innerHTML = freteData.embalagem;
+            coletaCell.innerHTML = freteData.coleta;
+            entregaCell.innerHTML = freteData.entrega;
+            clienteCell.innerHTML = freteData.cliente;
+            produtoCell.innerHTML = freteData.produto;
+            infoAdicionaisCell.innerHTML = freteData.infoAdicionais;
+
+            // Botão Excluir
+            const btnExcluir = document.createElement('button');
+            btnExcluir.textContent = 'Excluir';
+            btnExcluir.addEventListener('click', () => excluirEntrada(index));
+            acaoCell.appendChild(btnExcluir);
+        }
+
+        // Função para excluir uma entrada
+        function excluirEntrada(index) {
+            const fretes = JSON.parse(localStorage.getItem('fretes')) || [];
+            fretes.splice(index, 1); // Remove a entrada pelo índice
+            localStorage.setItem('fretes', JSON.stringify(fretes)); // Atualiza o localStorage
+            atualizarTabela(fretes); // Atualiza a tabela
+        }
+
+        // Função para atualizar a tabela com os dados fornecidos
+        function atualizarTabela(fretes) {
+            tableBody.innerHTML = ''; // Limpa a tabela
+
+            fretes.forEach((freteData, index) => {
+                adicionarLinha(freteData, index);
+            });
+        }
+
+        // Inicialize a tabela com os dados existentes
+        atualizarTabela(fretes);
     </script>
 </body>
 </html>
