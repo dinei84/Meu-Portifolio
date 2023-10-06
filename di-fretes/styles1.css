@@ -1,0 +1,93 @@
+/* Define a cor principal da paleta */
+:root {
+    --cor-principal: #C2211B;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fragment+Mono:ital@0;1&family=Kablammo&family=Lobster+Two&family=Noto+Sans+Anatolian+Hieroglyphs&family=Open+Sans:wght@300&family=Pacifico&family=Phudu:wght@300&family=Prompt:wght@100&family=Roboto:wght@100&family=Rubik+Mono+One&display=swap');
+
+  body{
+    background-image: url(imagens/images.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    font-family: 'Bebas Neue', sans-serif;
+font-family: 'Fragment Mono', monospace;
+font-family: 'Kablammo', cursive;
+font-family: 'Lobster Two', cursive;
+font-family: 'Noto Sans Anatolian Hieroglyphs', sans-serif;
+font-family: 'Open Sans', sans-serif;
+}
+
+h1{
+font-family: 'Bebas Neue', sans-serif;
+font-family: 'Fragment Mono', monospace;
+font-family: 'Kablammo', cursive;
+font-family: 'Lobster Two', cursive;
+font-family: 'Noto Sans Anatolian Hieroglyphs', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Phudu', cursive;
+font-family: 'Prompt', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Rubik Mono One', sans-serif;
+    text-align: center;
+    font-size: 3.5em;
+}
+
+  /* Estilo para a tabela */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: var(--cor-principal);
+    color: white;
+  }
+  
+  /* Estilo para as células de cabeçalho */
+  th {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Estilo para as células de dados */
+  td {
+    padding: 10px;
+    text-align: left;
+    border-radius: 5px;
+  }
+  
+  /* Estilo para as linhas alternadas */
+  tr:nth-child(even) {
+    background-color: #eb9191;
+    border-radius: 5px;
+  }
+  
+  /* Estilo para o botão Excluir */
+  button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  /* Gradiente de fundo para a tabela */
+  table {
+    background: linear-gradient(180deg, var(--cor-principal), #990000);
+    box-shadow: 2px 3px 10px black;
+  }
+  
+  /* Estilo para tornar a tabela responsiva */
+  @media (max-width: 768px) {
+    table {
+      font-size: 14px;
+    }
+    th,
+    td {
+      padding: 8px;
+    }
+  }
+  
