@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Fretes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Painel de Fretes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Frete</th>
+                <th>Carga</th>
+                <th>Descarga</th>
+            </tr>
+        </thead>
+        <tbody id="freteTableBody">
+            <!-- Aqui você pode adicionar as linhas da tabela dinamicamente com JavaScript -->
+        </tbody>
+    </table>
+
+    <script>
+        // Recupere todas as informações de frete do localStorage
+        const fretes = JSON.parse(localStorage.getItem('fretes')) || [];
+
+        // Referência ao corpo da tabela
+        const tableBody = document.getElementById('freteTableBody');
+
+        // Itere sobre todas as informações de frete e adicione linhas à tabela
+        fretes.forEach(freteData => {
+            const newRow = tableBody.insertRow(tableBody.rows.length);
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+            const cell3 = newRow.insertCell(2);
+
+            cell1.innerHTML = freteData.frete;
+            cell2.innerHTML = freteData.carga;
+            cell3.innerHTML = freteData.descarga;
+        });
+    </script>
+</body>
+</html>
