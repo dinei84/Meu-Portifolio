@@ -15,23 +15,49 @@ header {
   justify-content: space-between;
 }
 
-a {
-  width: 25px;
-  display: inline-block;
+i {
+  color: #888c03;
 }
 
-.header-icons a:hover img {
-  color: white;
+.header-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.header-icons a:hover i {
+  animation: translateY 0.3s infinite alternate;
+  color: rgb(66, 66, 10);
 }
 
 @keyframes translateY {
   from {
-    transform: translate(0) sacale(1);
+    transform: translateY(0) scale(1);
   }
   to {
-    transform: translate(-8px) scale(1);
+    transform: translateY(-8px) scale(1.1);
   }
 }
+.header-button {
+  border: 2px solid rgb(66, 66, 10);
+  padding: 8px 24px;
+  border-radius: 10px;
+  color: black;
+  background-color: transparent;
+  transition: background-color 0.4s;
+}
+
+.header-button:hover {
+  border: 3px solid #f2eda2;
+  background-color: rgb(66, 66, 10);
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+}
+
 body {
   font-family: "kadwa", sans-serif;
   width: 100vw;
