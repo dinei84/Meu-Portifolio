@@ -8,23 +8,20 @@ header{
     justify-content: space-between;
 }
 
-a{
+a {
     width: 25px;
     display: inline-block;
-}
-
-.header-icons a:hover{
-    img{
-        color: white;
-    }
-}
+  }
+  
+  .header-icons a:hover img {
+    filter: invert(30%); /* Aplica um filtro para inverter as cores da imagem no hover */
+  }
 
 @keyframes translateY {
-    from{
-        transform: translate(0) sacale(1);
+    from {
+      transform: translate(0) scale(1);
     }
-    to{
-        transform: translate(-8px) scale(1);
+    to {
+      transform: translate(-8px) scale(1);
     }
-
-}
+  }
