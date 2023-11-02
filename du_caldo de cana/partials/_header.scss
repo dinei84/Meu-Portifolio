@@ -1,0 +1,30 @@
+header{
+    width: 100%;
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a{
+    width: 25px;
+    display: inline-block;
+}
+
+.header-icons a:hover{
+    img{
+        color: white;
+    }
+}
+
+@keyframes translateY {
+    from{
+        transform: translate(0) sacale(1);
+    }
+    to{
+        transform: translate(-8px) scale(1);
+    }
+
+}
