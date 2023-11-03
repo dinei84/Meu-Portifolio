@@ -170,6 +170,44 @@ i {
     font-size: 24px;
   }
 }
+.about {
+  background-image: linear-gradient(to top, #f2eda2, white);
+  overflow: hidden;
+  color: #6f7302;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 14px 14px 64px 14px;
+}
+.about-content img {
+  max-width: 600px;
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-description h2 {
+  font-size: 38px;
+  margin-bottom: 24px;
+}
+.about-description p {
+  margin-bottom: 14px;
+  line-height: 150%;
+}
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+  .about-content img {
+    max-width: 350px;
+  }
+}
 body {
   font-family: "kadwa", sans-serif;
   width: 100vw;
